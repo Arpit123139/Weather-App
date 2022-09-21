@@ -11,7 +11,7 @@ const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
 //const API_KEY ='792c2a7e7b924b8433a1c9c997e3667f';
-const API_KEY1 ='49cc8c821cd2aff9af04c9f98c36eb74';
+const API_KEY2 ='49cc8c821cd2aff9af04c9f98c36eb74';
 
 // setInterval is the function which runs after a particular Interval 
 /******************************************************************************UPDATING DATE & TIME********************************************** */
@@ -38,7 +38,7 @@ function getWeatherData() {
         console.log(success)
         let { latitude, longitude } = success.coords;
         
-        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY1}`).then(res => res.json()).then(data => {
+        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${API_KEY2}`).then(res => res.json()).then(data => {
 
         console.log(data)
         showWeatherData(data)
